@@ -16,10 +16,7 @@ img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 Z = img.reshape((-1,3))
 Z = np.float32(Z)
     
-criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
-    
-   
-    
+criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)   
 K=12
 ret, label1, center1 = cv2.kmeans(Z, K, None,
                                       criteria, 12, cv2.KMEANS_PP_CENTERS)
